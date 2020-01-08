@@ -19,8 +19,12 @@ body {
   height: 100%;
 }
 
+.animated {
+  overflow-x: hidden;
+}
+
 #root {
-  min-width: 600px;
+  // min-width: 600px;
 }
 
 .App {

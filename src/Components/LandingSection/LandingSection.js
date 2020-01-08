@@ -18,11 +18,11 @@ function LandingSection({introText}) {
                     </div>
                 </ScrollAnimation>
 
-                <ScrollAnimation animateIn="fadeInRight" animateOnce>
+                {/* <ScrollAnimation animateIn="fadeInRight" animateOnce> */}
                     <div className="LandingSection__actionButtons">
                         <Button text='View Resume'></Button>
                     </div>
-                </ScrollAnimation>
+                {/* </ScrollAnimation> */}
             </div>
             <ImageOverlay opacity={.5}/>
 

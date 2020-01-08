@@ -9,7 +9,7 @@ import Work from './Components/Work/Work'
 import Error from './Components/Error/Error'
 import Skill from './Components/Skill/Skill'
 import About from './Components/About/About'
-import Form from './Components/Form/Form'
+import ContactForm from './Components/ContactForm/ContactForm'
 import Card from './Components/Card/Card'
 import Footer from './Components/Footer/Footer'
 import SlideOutNavigation from './Components/SlideOutNavigation/SlideOutNavigation'
@@ -113,7 +113,6 @@ function App() {
       {menuOpen ? <SlideOutNavigation links={headerLinks} closeMenu={() => setMenuOpen(false)}/> : null}
 
       <HeaderNavigation links={headerLinks} toggleNavigation={toggleNavigationHandler}/>
-      {/* {menuOpen ? <Backdrop /> : null} */}
 
       <LandingSection introText={introText} />
 
@@ -134,10 +133,10 @@ function App() {
       </Section>
 
       <Section title='contact' theme='light' headerCaption='If you want to get in touch to collaborate on a project please fill out the form below.'>
-            <Form />
+            <ContactForm />
       </Section>
 
-      <Section title='blog' theme='dark' >
+      <Section title='blog' theme='dark'>
             <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
               {cardData.length > 0 ? 
                 cardData.map((card, index) => <Card key={index} delay={index * 180}index={index + 1} title={card.title} text={card.text}/>)

@@ -17,8 +17,21 @@
     font-size: $h1-medium-label;
     padding-bottom: 10px;
     width: 152px;
+    min-width: 152px;
 }
 
 .Skill__content-name {
     text-align: center;
 }
+
+
+@media only screen and (max-width: 400px) {
+    .Skill__content-percent {
+        width: 100%;
+    }
+
+    .Skill__container {
+        margin: 20px 10px;
+    }
+
+  }

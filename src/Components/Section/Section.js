@@ -7,7 +7,7 @@ function Section({ theme, children, title, headerCaption, style }) {
         <div id={title} className={`Section__container Section__theme-${theme}`} style={{ ...style }}>
             <ScrollAnimation animateIn="fadeIn">
                 <div className='Section__header-main'>
-                    <h1>{title}</h1>
+                    <h1 className='Section__header-title'>{title}</h1>
 
                     <p className='Section__container-header-caption'>{headerCaption}</p>
                 </div>

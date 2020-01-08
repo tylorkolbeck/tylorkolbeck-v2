@@ -14,14 +14,14 @@ export default function Footer() {
             </div>
 
             <div className='Footer__content-container'>
-                <div style={{background: '#323232', padding: '10px', color: 'lightgrey'}}>
+                <div style={{background: '#323232', padding: '20px', color: 'lightgrey'}}>
                     <h1>Thanks <br />For Visiting!</h1>
                     <p style={{maxWidth: '300px'}}>This site was created using React and and a firebase database.</p>
                 </div>
 
-                 <div>
+                <div>
                     <h2>NAVIGATION</h2>
-                    <ul className="noStyle">
+                    <ul className="Footer__navigation_links">
                         <li>WORK</li>
                         <li>SKILLS</li>
                         <li>ABOUT</li>
@@ -32,16 +32,16 @@ export default function Footer() {
 
                 <div>
                     <h2>LOCATION</h2>
-                    <p>San Diego, CA 92107</p>
-                    </div>
+                        <p>San Diego, CA 92107</p>
+                </div>
 
-                    <div>
+                <div>
                     <h2>Contact Info</h2>
                     <p>Email: TylorKolbeck@gmail.com</p>
                     <p>Cell: (904)955-4553</p>
-                    </div>
+                </div>
 
-                    <div>
+                <div>
                     <h2>GitHub</h2>
                     <p>https://github.com/tylorkolbeck</p>
                 </div>

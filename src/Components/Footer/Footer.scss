@@ -3,12 +3,14 @@
 .Footer__container {
     color: $color-grey-dark;
     background: $color-grey-light;
-    padding: 20px;
-    // width: 100vw;
-    padding-left: 40px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.Footer__navigation_links {
+    font-weight: 100;
 }
 
 .Footer__UpArrow-box {
@@ -30,13 +32,27 @@
 .Footer__content-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-top: 20px;
-    margin-bottom: 60px;
     width: 100%;
+    padding: 20px;
 
-    &  div {
-        margin-left: 20px;
-        margin-top: 50px;
+    & p {
+        word-break: break-all;
+    }
+
+    & div {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .Footer__content-container p {
+        font-size: 16px;
+    }
+
+    .Footer__navigation_links {
+        font-weight: 100;
+        font-size: 16px;
     }
 }

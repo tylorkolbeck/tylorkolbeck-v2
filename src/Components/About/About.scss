@@ -13,12 +13,14 @@
 .About__image-container {
     border-left: $border-size solid $color-red;
     padding-bottom: 100px;
+    display: flex;
    
 }
 
 .About-img {
     margin-left: 50px;
     height: 30vw;
+    width: 30vw;
     width: 30vw;
     max-width: 600px;
     max-height: 600px;
@@ -29,6 +31,7 @@
 .About__text-container {
     width: 40vw;
     max-width: 600px;
+    padding-bottom: 50px;
 }
 
 
@@ -45,10 +48,10 @@
     }
 
     .About-img {
-        width:300px;
-        height: 300px;
+        width: 60vw;
+        height: 60vw;
         margin-right: 40px;
-        margin-left: 40px;
+        // margin-left: 40px;
     }
 
     
@@ -57,4 +60,21 @@
         padding-top: 50px;
         margin: auto;
     }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .About-img {
+        margin-left: 0;
+        width: 80vw;
+        margin: auto;
+        height: 80vw;
+    }
+
+
+    .About__image-container {
+        border: none;
+        // width: 600px;
+    }
+
 }

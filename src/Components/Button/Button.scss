@@ -5,15 +5,13 @@
     display: inline-flex;
     position: relative;
     justify-content: center;
-    padding: 6px 50px;
+    padding: 6px 12px;
     transition: all 0.5s;
     font-size: inherit;
 
     & > p {
         font-size: 1em;
     }
-
-    // width: 200px;
 
     &::after {
         content: '';
@@ -30,7 +28,6 @@
     &:hover {
         cursor: pointer;
         background: darken($color-red, 1%);
-        // box-shadow: 2px 2px 4px rgba(0,0,0, .2);
     }
 
 

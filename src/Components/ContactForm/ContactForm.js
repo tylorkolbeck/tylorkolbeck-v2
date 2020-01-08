@@ -1,8 +1,8 @@
 import React from 'react'
-import './Form.scss'
+import './ContactForm.scss'
 import Button from '../Button/Button'
 
-export default function Form() {
+export default function ContactForm() {
     return (
         <div className='Form__container'>
             <form>
