@@ -35,7 +35,7 @@ function HeaderNavigation({links, toggleNavigation}) {
             <ul>
                 {links ? generateLinksFromProps(links) : <Error>No links to map</Error>}
             </ul>
-            <LoginDropdown />
+            {/* <LoginDropdown /> */}
         </div>
     )
 }
