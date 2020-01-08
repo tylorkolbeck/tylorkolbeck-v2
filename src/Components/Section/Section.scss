@@ -1,0 +1,40 @@
+@import '../../css/variables.scss';
+
+.Section__container {
+    padding-bottom: 100px;
+
+    // & p {
+    //     font-size: $p-homepage-size;
+    // }
+
+    .Section__container-header-caption {
+        padding: 0px 20px;
+        margin-bottom: 20px;
+    }
+
+    .Section__header-main {
+        display: block;
+        text-align: center;
+        padding-top: 100px;
+
+        & h1 {
+            text-transform: uppercase;
+            font-size: 4em;
+            padding-bottom: 50px;
+        }
+    }
+}
+
+.Section__theme-dark {
+    background: $color-grey-dark;
+    color: $color-white;
+}
+
+.Section__theme-light {
+    background: $color-grey-light;
+    color: $color-grey-dark;
+}
+
+.Section__header-main {
+    letter-spacing: $h1-section-header-spacing;
+}

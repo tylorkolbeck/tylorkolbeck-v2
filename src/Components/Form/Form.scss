@@ -1,0 +1,50 @@
+@import '../../css/variables.scss';
+
+.Form__container {
+    // margin-top: $margin-after-section-header;
+    padding: 0px 40px;
+    margin-top: 50px;
+    & > form {
+        max-width: 600px;
+        margin: auto;
+    }
+}
+
+.Form__button-container {
+    text-align: center;
+    padding: 50px;
+}
+
+input {
+    // padding: 12px 12px;
+    outline: none;
+    border: none;
+    // font-size: $p-homepage-size;
+    color: $color-grey-dark;
+    width: 100%;
+    margin-bottom: 20px;
+    background: $color-white;
+
+
+}
+
+textarea {
+    // padding: 12px 12px;
+    // font-size: $p-homepage-size;
+    outline: none;
+    border: none;
+    height: 200px;
+    width: 100%;
+    resize: none;
+    background: $color-white;
+    color: $color-grey-dark;
+
+    // &::placeholder {
+    //     color: $color-grey-dark;
+    //     letter-spacing: $p-letter-spacing;
+    //     // font-size: $p-homepage-size;
+    // }
+}
+
+
+

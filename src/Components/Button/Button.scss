@@ -1,0 +1,57 @@
+@import '../../css/variables.scss';
+
+.Button {
+    background: $color-red;
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    padding: 6px 50px;
+    transition: all 0.5s;
+    font-size: inherit;
+
+    & > p {
+        font-size: 1em;
+    }
+
+    // width: 200px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        background: white;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        transition: all .5s;
+        opacity: 0;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background: darken($color-red, 1%);
+        // box-shadow: 2px 2px 4px rgba(0,0,0, .2);
+    }
+
+
+    &:hover::after {
+        content: attr(data-text);
+        text-transform: uppercase;
+        color: $color-red;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        opacity: 1;
+        font-weight: 100;
+    }
+
+     > p {
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        color: white;
+        letter-spacing: .08em;
+    }
+}
+

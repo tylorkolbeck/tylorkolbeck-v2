@@ -1,0 +1,47 @@
+@import "../../css/variables.scss";
+
+.HeaderNavigation__container {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  background-color: $color-grey-darker;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+
+  .Link__active {
+    border-bottom: $border-size solid $color-red;
+    padding-bottom: 6px;
+  }
+
+  & ul {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  & ul > li {
+    list-style: none;
+    display: inline-block;
+    list-style: none;
+    color: $color-white;
+    margin: 0px 40px;
+    text-transform: uppercase;
+
+    &:hover {
+        cursor: pointer;
+    }
+    
+  }
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    .HeaderNavigation__container {
+
+        & ul {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@import '../../css/variables.scss';
+
+.Card__container {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 60px;
+}
+
+.Card__index-container {
+    border-bottom: $border-size solid $color-red;
+
+    & > h1 {
+        font-size: $h1-medium-label;
+    }
+}
+
+.Card__content-container {
+    margin-left: 20px;
+    width: 250px;
+}
+
+.Card__image-container {
+    height: 250px;
+    width: 250px;
+    margin-top: 16px;
+    background: $color-grey-light;
+}
+
+.Card__text {
+    & > h2 {
+        margin-top: 20px;
+    }
+
+    & > p {
+        text-align: justify;
+        margin-top: 10px;
+        font-size: $p-caption;
+    }
+}

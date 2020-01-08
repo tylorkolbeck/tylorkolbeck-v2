@@ -1,0 +1,24 @@
+@import '../../css/variables.scss';
+
+.Skill__container {
+    // background: blue;
+    display: inline-flex;
+    margin: 50px 20px;
+    
+
+    p {
+        font-size: 1.3em;
+        padding-top: 10px;
+    }
+}
+
+.Skill__content-percent {
+    border-bottom: $border-size solid $color-red;
+    font-size: $h1-medium-label;
+    padding-bottom: 10px;
+    width: 152px;
+}
+
+.Skill__content-name {
+    text-align: center;
+}

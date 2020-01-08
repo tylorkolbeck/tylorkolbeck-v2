@@ -1,0 +1,9 @@
+@import '../../../css/variables.scss';
+
+.LogoSVG {
+    fill: $color-red;
+    &:hover {
+        cursor: pointer;
+        fill: white;
+    }
+}

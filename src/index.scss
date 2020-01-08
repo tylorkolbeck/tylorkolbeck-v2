@@ -1,0 +1,102 @@
+@import "./css/variables.scss";
+
+body {
+  margin: 0;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  // line-height: 1.5;
+  font-size: $base-font-size;
+  -webkit-text-stroke: 0.45px;
+  color: green;
+  width: 100%;
+  height: 100%;
+}
+
+input, textarea, *::before, *::after{
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+  "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1em;
+  padding: 10px 12px;
+}
+
+input::placeholder {
+  color: $color-grey-dark;
+  letter-spacing: $p-letter-spacing;
+}
+
+textarea::placeholder  {
+  color: $color-grey-dark;
+  letter-spacing: $p-letter-spacing;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+p {
+  letter-spacing: $p-letter-spacing;
+  line-height: $p-line-height;
+  font-weight: 100;
+  font-size: $p-homepage-size;
+}
+
+h1 {
+  letter-spacing: $h1-section-header-spacing;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+@media only screen and (max-width: 599px) {
+  p {
+      text-align: justify;
+      text-justify: distribute;
+      text-align-last: left;
+      // word-break: break-all;
+      word-spacing: .01em;
+  }
+}
