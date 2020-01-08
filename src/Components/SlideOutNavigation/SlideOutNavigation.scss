@@ -7,7 +7,6 @@
     top: 0;
     bottom: 0;
     height: 500px;
-    // width: 100vw;
     min-height: 100vh;
     background: $color-grey-dark;
     z-index: 100;
@@ -30,15 +29,16 @@
         padding: 20px;
         display: flex;
 
-        & div:first-child {
+        & > div {
             transform: translateY(-5vh);
             font-size: 6vh;
             color: rgba($color-grey-light, .3);
             margin-right: 10px;
-            border-bottom: $border-size solid red;
+            border-bottom: 1px solid $color-red;
         }
     }
 }
+
 
 .SlideOutNavigation__close-container {
     position: absolute;

@@ -1,5 +1,7 @@
 import React from 'react'
 import './SlideOutNavigation.scss'
+import { Link, animateScroll as scroll } from "react-scroll";
+
 
 export default function SlideOutNavigation({ links, closeMenu }) {
     return (
@@ -13,7 +15,14 @@ export default function SlideOutNavigation({ links, closeMenu }) {
                         return (
                             <li key={link.text}>
                                 <div>0{index + 1}</div>
-                                <div>{link.text}</div>
+                                <Link to={link.to}
+                                    activeClass="Link__active"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-100}
+                                    duration= {800}>
+                                        <div className="SlideOutNavigation__menu-link" onClick={closeMenu}>{link.text}</div>
+                                </Link>
                             </li>
                         )
                     })
