@@ -3,6 +3,8 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import './Work.scss'
 
 
+
+
 export default function Work({ index, title, text, img }) {
 
     // CREATE IMAGE CONTEXT TO SET IMAGE TO BACKGROUND

@@ -1,0 +1,21 @@
+@import './variables.scss';
+
+input {
+    outline: none;
+    border: none;
+    color: $color-grey-dark;
+    width: 100%;
+    margin-bottom: 20px;
+    background: $color-white;
+    border-bottom: 1px solid $color-grey-dark;
+}
+
+textarea {
+    outline: none;
+    border: none;
+    height: 200px;
+    width: 100%;
+    resize: none;
+    background: $color-white;
+    color: $color-grey-dark;
+}

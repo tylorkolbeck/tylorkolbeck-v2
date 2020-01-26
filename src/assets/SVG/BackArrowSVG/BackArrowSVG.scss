@@ -1,0 +1,10 @@
+@import '../../../css/variables.scss';
+
+.BackArrowSVG {
+    fill: $color-red;
+    padding-right: 10px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -1,6 +1,9 @@
 import React from 'react'
 import './Section.scss'
-import ScrollAnimation from 'react-animate-on-scroll';
+import ScrollAnimation from 'react-animate-on-scroll'
+import { Markup } from 'interweave'
+import ReactHtmlParser from 'react-html-parser'
+import {Link} from 'react-router-dom'
 
 function Section({ theme, children, title, headerCaption, style }) {
     return (
@@ -8,8 +11,9 @@ function Section({ theme, children, title, headerCaption, style }) {
             <ScrollAnimation animateIn="fadeIn">
                 <div className='Section__header-main'>
                     <h1 className='Section__header-title'>{title}</h1>
-
-                    <p className='Section__container-header-caption'>{headerCaption}</p>
+                    <div className='Section__container-header-caption'>
+                        {headerCaption}
+                    </div>
                 </div>
             </ScrollAnimation>
 

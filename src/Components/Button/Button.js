@@ -4,12 +4,13 @@ import './Button.scss'
 /**
  * 
  * @param {string} text what is displayed on the button 
+ * @param {function} onClick What to do when the button is clicked
  */
 
-export default function Button({text}) {
+export default function Button({text, onClick, disabled, type}) {
     return (
-        <div className="Button" data-text={text}>
-            <p>{text}</p>
+        <div className={`Button ${type}`} data-text={text} onClick={onClick} >
+            <button disabled={disabled}>{text}</button>
         </div>
     )
 }

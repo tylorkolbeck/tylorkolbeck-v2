@@ -7,6 +7,10 @@
         max-width: 600px;
         margin: auto;
     }
+
+    & input {
+        border: none;
+    }
 }
 
 .Form__button-container {
@@ -14,26 +18,6 @@
     padding: 50px;
 }
 
-input {
-    outline: none;
-    border: none;
-    color: $color-grey-dark;
-    width: 100%;
-    margin-bottom: 20px;
-    background: $color-white;
-
-
-}
-
-textarea {
-    outline: none;
-    border: none;
-    height: 200px;
-    width: 100%;
-    resize: none;
-    background: $color-white;
-    color: $color-grey-dark;
-}
 
 @media screen and (max-width: 400px) {
     .Form__container {

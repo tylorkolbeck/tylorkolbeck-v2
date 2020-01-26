@@ -2,14 +2,11 @@
 
 .SlideOutNavigation__container {
     position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    height: 500px;
     min-height: 100vh;
+    width: 100vw;
     background: $color-grey-dark;
     z-index: 100;
+    transition: all ease-in-out .5s;
 
     & ul, li {
         color: $color-white;
@@ -29,15 +26,27 @@
         padding: 20px;
         display: flex;
 
+        &:hover {
+            cursor: pointer;
+        }
+        
+
         & > div {
-            transform: translateY(-5vh);
-            font-size: 6vh;
+            font-size: 5vh;
             color: rgba($color-grey-light, .3);
             margin-right: 10px;
             border-bottom: 1px solid $color-red;
         }
     }
 }
+
+.SlideOutNavigation__container-open {
+    transform: translatey(0);
+} 
+
+.SlideOutNavigation__container-closed {
+    transform: translateY(-100vh);
+}   
 
 
 .SlideOutNavigation__close-container {
@@ -46,8 +55,6 @@
     top: 40px;
     font-family: arial, sans-sarif;
     color: $color-red;
-
-
 }
 
 

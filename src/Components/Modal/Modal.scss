@@ -1,0 +1,47 @@
+@import '../../css/variables.scss';
+
+.Modal__container {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    padding: 12px;
+    background-color: rgba(black, .8);
+    z-index:2;
+  }
+
+  .Modal__centering-container {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .Modal__Content {
+    margin: auto;
+    background: $color-white;
+
+    & > .Modal__header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $color-grey-darker;
+        text-align: center;
+        padding: 40px;
+        color: $color-white;
+    }
+
+    & > .Modal__body {
+        padding: 40px;
+    }
+
+    .Modal__header-close-btn {
+        margin-left: auto;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+  }

@@ -1,0 +1,75 @@
+@import '../../css/variables.scss';
+
+$loginContainerWidth: 300px;
+
+.LoginDropdown__container {
+    position: fixed;
+    right: 0px;
+    top: 100px;
+    z-index: 2;
+    transition: all ease .5s;
+    transform: translateX($loginContainerWidth);
+    color: $color-grey-darker;
+
+    & p {
+        font-size: 1em; 
+    }
+}
+
+.LoginDropdown__shown {
+    display: flex;
+
+    & .LoginDropDown__btn-open {
+        background: rgba($color-white, 1);
+        align-self: flex-start;
+        padding: 10px 30px;
+        transition: all ease .5s;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.LoginDropdown__content {
+    padding: 50px 20px;
+    background: rgba($color-white, 1);
+    width: $loginContainerWidth;
+}
+
+
+.LoginDropdown__content-shown {
+    transform: translateX(0);
+}
+
+.LoginDropdown__btn-hide {
+    opacity: 0;
+    transform: translateX(50px) scale(0);
+}
+
+.LoginDropdown__input-text {
+    padding-top: 16px;
+    font-size: 1em;
+
+    p {
+        padding: 8px 0px;
+    }
+
+    & p:hover {
+        cursor: pointer;
+    }
+}
+
+.LoginDropdown__close-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.LoginDropdown__spinner-container {
+    text-align: center;
+}

@@ -13,24 +13,19 @@ export default function Skill({ percent, name, delay }) {
                 if (counter < percent) {
                     setCounter(counter + 2)
                 }
-            }, 20);
+            }, 20)
         }
-
-
-
-        // return () => window.clearInterval(countUp)
-
     }, [counter, startAnimation])
 
     return (
-        <div className='Skill__container'>
-            <div className='Skill__content'>
-                <ScrollAnimation delay={delay} animateIn="fadeInUp" animateOnce duration={.5} afterAnimatedIn={() => setStartAnimation(true)}>
-                    <h1 className='Skill__content-percent'>{`${counter}%`}</h1>
+            <div className='Skill__container'>
+                <ScrollAnimation animateIn='fadeIn' afterAnimatedIn={() => setStartAnimation(true)}>
+                    <div className='Skill__content'>
+                        <h1 className='Skill__content-percent'>{`${counter}%`}</h1>
+                        <p className='Skill__content-name'>{name}</p>
+                    </div>
                 </ScrollAnimation>
-                <p className='Skill__content-name'>{name}</p>
             </div>
-        </div>
 
 
 

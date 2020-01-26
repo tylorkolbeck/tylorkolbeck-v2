@@ -1,13 +1,14 @@
 import React from 'react'
 import './SlideOutNavigation.scss'
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from 'react-scroll'
 
 
-export default function SlideOutNavigation({ links, closeMenu }) {
+export default function SlideOutNavigation({ links, closeMenu, menuIsOpen}) {  
+
     return (
-        <div className="SlideOutNavigation__container">
-            <div className="SlideOutNavigation__close-container" onClick={closeMenu}>
-                <div className="SlideOutNavigation__close-btn"></div>
+        <div className={`SlideOutNavigation__container ${menuIsOpen ? `SlideOutNavigation__container-open`: `SlideOutNavigation__container-closed `}`}>
+            <div className="SlideOutNavigation__close-container">
+                <div className="SlideOutNavigation__close-btn" onClick={closeMenu}></div>
             </div>
             <ul>
                 {
