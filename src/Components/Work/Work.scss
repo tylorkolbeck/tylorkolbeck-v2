@@ -3,11 +3,6 @@
 .Work__container {
     width: 100%;
     margin-top: 100px;
-
-    // .Work__content:last-of-type {
-    //     padding-bottom: 100px;
-    // }
-
 }
 
 .Work__header {
@@ -18,12 +13,7 @@
             font-size: 9em;
             line-height: .7em;
             padding-left: 40px;
-            // text-align: right;
         }
-    }
-
-    & > div:nth-child(2) {
-        // color: pink;
     }
 }
 
@@ -50,16 +40,38 @@
     > h1 {
         padding-bottom: 20px;
     }
+
+    & li {
+        position: relative;
+        text-decoration: none;
+        font-style: none;
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        padding: 10px;
+    }
+
+    & li::before {
+        content: '';
+        left: -20px;
+        position: absolute;
+        background-color: $color-red;
+    }
 }
 
 
 .Work__content-img {
-    background: $color-grey-light;
+    background: none;
     width: 100%;
     max-width: 500px;
     height: 300px;
     margin-bottom: 50px;
     margin-right: 40px;
+
+    img {
+        min-width: 100%;
+        height: 100%;
+    }
 }
 
 
@@ -70,7 +82,6 @@
     }
 
     .Work__content-img {
-        // margin-left: 20px;
         margin: auto;
         margin-bottom: 50px;
         width: 90%;

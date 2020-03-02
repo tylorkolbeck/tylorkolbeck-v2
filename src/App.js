@@ -76,7 +76,7 @@ function App() {
             <LoginContainer openRegisterModal={toggleRegisterModal}/>
 
             <Modal header='Register' shown={registerModalShown} closeModal={toggleRegisterModal}>
-                <RegistrationForm />
+                <RegistrationForm toggleModal={setRegisterModalShown}/>
             </Modal>
 
             <Home />

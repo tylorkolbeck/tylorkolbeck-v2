@@ -1,9 +1,9 @@
 import React from 'react'
 import './Section.scss'
 import ScrollAnimation from 'react-animate-on-scroll'
-import { Markup } from 'interweave'
-import ReactHtmlParser from 'react-html-parser'
-import {Link} from 'react-router-dom'
+// import { Markup } from 'interweave'
+// import ReactHtmlParser from 'react-html-parser'
+// import {Link} from 'react-router-dom'
 
 function Section({ theme, children, title, headerCaption, style }) {
     return (

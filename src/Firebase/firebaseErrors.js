@@ -1,18 +1,14 @@
 export default function fireBaseErrors(error) {
     switch(error) {
         case 'auth/wrong-password':
-            console.log('WRONG PASSWORD')
-            break
-        case 'auth/email-already-in-use':
-            console.log('Email already in use')
-            break
+            return 'User credentials do not match our records.'
         case 'auth/invalid-email':
-            console.log('Email already in use')
-            break
+            return 'Invalid email format'
         case 'auth/weak-password':
-            console.log('Weak Password')
-            break
+            return 'Weak password.'
+        case 'auth/email-already-in-use':
+            return 'The email is already in use.'
         default: 
-            console.log('UNCAUGHT FIREBASE ERROR')
+            return 'There was an error creating the account.'
     }
 }

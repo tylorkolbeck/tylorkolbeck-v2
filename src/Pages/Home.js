@@ -1,6 +1,4 @@
 import React from 'react'
-
-// Home Components
 import LandingSection from '../Components/LandingSection/LandingSection'
 import Section from '../Components/Section/Section'
 import Work from '../Components/Work/Work'
@@ -13,27 +11,45 @@ import Card from '../Components/Card/Card'
 import { Link } from 'react-router-dom'
 
 const sectionText = {
-    workSectionCaption: () => <p>Here are a few recent projects that I have worked on. You can view my resume <Link to='/resume'>here.</Link></p>,
+    workSectionCaption: () => <p>Here are a few projects that I am currently working on. You can view my resume <Link to='/resume'>here.</Link></p>,
     headerSectionCaption: () => <p>These are my primary skill areas.</p>,
-    landingSectionCaption: () => <h1 className="LandingSection__header-text"> Hi, my name is <span>Tylor Kolbeck</span>. I am a front-end React developer and UX designer.</h1>,
-    contactSectionCaption: () => <p>If you have a question or want to collaborate on a project please fill out the form below.</p>
+    landingSectionCaption: () => <h1 className="LandingSection__header-text"> Hi, my name is <span>Tylor Kolbeck</span>. I Am a UI/UX and Front End Developer.</h1>,
+    contactSectionCaption: () => <p>If you have a question or want to collaborate on a project please send me a message!</p>
 }
 
 const workInfo = [
     {
-        img: 'image1.jpg',
-        title: 'Project Title Here',
-        text: 'I m the co-founder of Gruntwork, a company that helps startups get up and running on AWS with DevOps best practices and world-class infrastructure. Our mission is to make it an order of magnitude easier to understand, develop, and deploy software. '
+        img: 'wildside_mockup.jpg',
+        title: 'UI / UX Developer',
+        text: `<p>I am currently working for Jack Henry and Asssociates as a UI/UX developer.  I am responsible for producing and maintaining a functional prototype with which our team deploys to Credit Unions across the US for user testing.</p>
+                <ul>
+                    <li>React</li>
+                    <li>Prototyping</li>
+                    <li>User Testing</li>
+                    <li>Sketch</li>
+        
+              `
     },
     {
-        img: 'image2.jpg',
-        title: 'Another Project Title',
-        text: 'This book is the "Hello, World" tutorial for building products, technologies, and teams in a startup environment. I based it off of my own experiences, as well as interviews with programmers from some of the most successful startups of the last decade, including Google, Facebook, LinkedIn, Twitter, GitHub, Stripe, Instagram, AdMob, Pinterest, and many others. '
+        img: 'wildside_mockup.jpg',
+        title: 'WildsideVo.com',
+        text: `<p>WildsideVO is a voice over portfolio designed for a client to show case his work and passion for wildlife.  Created using React framework and designed to fil all screen sizes.</p>
+                <ul>
+                    <li>React</li>
+                    <li>Responsive</li>
+                </ul>
+                `
     },
     {
-        img: 'image3.jpg',
-        title: 'Startup Essentials',
-        text: 'This free e-book is a curated collection of chapters from the O\'Reilly Business Library. It includes a chapter from my book, Hello, Startup. '
+        img: 'petcare_mockup.png',
+        title: 'JenniferInglePetCare.com',
+        text: `<p>Created for a client to market their pet sitting business as well provide a place for customers to request service. Created using React framework, deployed on a Digital Ocean VM and designed to fit all screen sizes.</p>
+                <ul>
+                    <li>Front End - React</li>
+                    <li>Responsive</li>
+                    <li>Email Services</li>
+                </ul>
+                `
     },
 ]
 
@@ -63,18 +79,18 @@ const skillData = [
 
 const cardData = [
     {
-        title: 'Another Title',
-        text: 'This is a short description of the post. You will have to click here to read more...',
+        title: 'Coming Soon',
+        text: 'Please be patient while I get my blog posts connected to my website.',
         image: ''
     },
     {
-        title: 'Some Title Here',
-        text: 'This is a short description of the post. You will have to click here to read more...',
+        title: 'Coming Soon',
+        text: 'Please be patient while I get my blog posts connected to my website.',
         image: ''
     },
     {
-        title: 'Blog Post Title',
-        text: 'This is a short description of the post. You will have to click here to read more...',
+        title: 'Coming Soon',
+        text: 'Please be patient while I get my blog posts connected to my website.',
         image: ''
     }
 ]
@@ -99,18 +115,13 @@ export default function Home() {
                     : <Error>No Skill Data</Error>}
             </Section>
 
-            {/* ABOUT SECTION */}
-            <Section title='about' theme='dark' style={{ paddingBottom: '0px' }}>
-                <About />
-            </Section>
-
             {/* CONTACT SECTION  */}
-            <Section title='contact' theme='light' headerCaption={sectionText.contactSectionCaption()}>
+            <Section title='contact' theme='dark' headerCaption={sectionText.contactSectionCaption()}>
                 <ContactForm />
             </Section>
 
             {/* BLOG SECTION */}
-            <Section title='blog' theme='dark'>
+            <Section title='blog' theme='light'>
                 <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
                     {cardData.length > 0 ?
                         cardData.map((card, index) => <Card key={index} delay={index * 180} index={index + 1} title={card.title} text={card.text} />)
@@ -120,6 +131,14 @@ export default function Home() {
                     <Button text='More Posts' type='btn-primary'/>
                 </div>
             </Section>
+
+
+            {/* ABOUT SECTION */}
+            <Section title='about' theme='dark' style={{ paddingBottom: '0px' }}>
+                <About />
+            </Section>
+
+
         </div>
     )
 }

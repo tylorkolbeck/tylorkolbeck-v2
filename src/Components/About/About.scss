@@ -14,7 +14,8 @@
     border-left: $border-size solid $color-red;
     padding-bottom: 100px;
     display: flex;
-   
+
+
 }
 
 .About-img {
@@ -32,6 +33,11 @@
     width: 40vw;
     max-width: 600px;
     padding-bottom: 50px;
+    font-size: 16px;
+
+    & p {
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -53,8 +59,6 @@
         margin-right: 40px;
         // margin-left: 40px;
     }
-
-    
 
     .About__text-container {
         padding-top: 50px;

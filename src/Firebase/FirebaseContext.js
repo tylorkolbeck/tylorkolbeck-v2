@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from 'react'
+import React, { createContext, useState } from 'react'
 import firebase from './firebase'
 import firebaseErrors from './firebaseErrors'
 
@@ -22,6 +22,8 @@ function onAuthStateChange(callback) {
 export default function FirebaseContextProvider(props) {
     const [user, setUser] = useState({ loggedIn: false })
     const [isLoading, setIsLoading] = useState(false)
+    const [registrationError, setRegistrationError] = useState(null)
+    const [registrationLoading, setRegistrationLoading] = useState(false)
 
     function loginHandler(email, password) {
         setIsLoading(true)
@@ -44,14 +46,19 @@ export default function FirebaseContextProvider(props) {
         firebase.auth().signOut()
     }
 
-    function signUpHandler(email, password, displayName) {
+    function signUpHandler(email, password, displayName, callback) {
+        setRegistrationLoading(true)
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .then((res) => {
-            return res.user.updateProfile({
+            setRegistrationLoading(false)
+            res.user.updateProfile({
                 displayName: displayName
             })
-        }).catch((err) => {
-            console.log(err)
+            callback()
+        })
+        .catch((err) => {
+            setRegistrationLoading(false)
+            setRegistrationError(firebaseErrors(err.code))
         })
     }
 
@@ -78,7 +85,9 @@ export default function FirebaseContextProvider(props) {
             signUpHandler,
             isLoading,
             userInfo,
-            updateUserDisplayNameHandler
+            updateUserDisplayNameHandler,
+            registrationError,
+            registrationLoading
         }}>
             {props.children}
         </FirebaseContext.Provider>

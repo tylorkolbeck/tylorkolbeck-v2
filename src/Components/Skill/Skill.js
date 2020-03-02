@@ -15,7 +15,7 @@ export default function Skill({ percent, name, delay }) {
                 }
             }, 20)
         }
-    }, [counter, startAnimation])
+    }, [counter, startAnimation, percent])
 
     return (
             <div className='Skill__container'>

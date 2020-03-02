@@ -1,21 +1,21 @@
 import React from 'react'
 import './About.scss'
+import reactHtmlParser from 'react-html-parser'
 import ScrollAnimation from 'react-animate-on-scroll';
 
 
 export default function About() {
     return (
-        <ScrollAnimation animateIn="fadeInUp">
-        <div className='About__container'>
+        <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+            <div className='About__container'>
                 <div className='About__image-container'>
                     <div className='About-img'></div>
                 </div>
 
                 <div className='About__text-container'>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusantium et ipsa adipisci tempora iure ab quisquam aliquid! Voluptates perspiciatis provident excepturi maxime expedita minima asperiores, dignissimos aliquid aliquam corporis itaque fuga aperiam! Illum, quod obcaecati! Itaque veritatis odio dolor, beatae ex magnam voluptas exercitationem voluptates fugiat quasi sit praesentium.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  Harum, rem. Consequatur atque, ea illum soluta natus molestiae alias labore iure cupiditate nostrum, expedita laboriosam assumenda facilis, temporibus eius voluptates a!</p>
+                    {reactHtmlParser(`Hello, my name Is Tylor. I live in San Diego with my wife Kaila, two dogs Reuger and Willow, and Nanday Conure, Pitrie. I am a 12 year Navy veteran that has changed careers to pursue my dream of being a web developer.  I currently work remote at Jack Henry And Assosciates as a Senior UI/UX Developer. `)}
                 </div>
-        </div>
+            </div>
         </ScrollAnimation>
     )
 }

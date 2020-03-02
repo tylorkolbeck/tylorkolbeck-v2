@@ -1,12 +1,11 @@
 import React from 'react'
-import ScrollAnimation from 'react-animate-on-scroll';
 import './Work.scss'
 
-
-
+import ScrollAnimation from 'react-animate-on-scroll'
+import ReactHtmlParser from 'react-html-parser'
+const images = require.context('../../assets/images')
 
 export default function Work({ index, title, text, img }) {
-
     // CREATE IMAGE CONTEXT TO SET IMAGE TO BACKGROUND
 
     return (
@@ -23,11 +22,11 @@ export default function Work({ index, title, text, img }) {
                     <div className="Work__content">
                         <div className="Work__content-text">
                             <h1>{title}</h1>
-                            <p>{text}</p>
+                            <div>{ReactHtmlParser(text)}</div>
                         </div>
 
                         <div className="Work__content-img">
-
+                            <img src={images(`./${img}`)} alt='Work Demo'></img>
                         </div>
 
 
