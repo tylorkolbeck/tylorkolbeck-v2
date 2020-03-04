@@ -3,14 +3,14 @@ import './LandingSection.scss'
 
 import ScrollAnimation from 'react-animate-on-scroll'
 import { useHistory } from 'react-router-dom'
-import HeaderImage from '../../assets/images/LandingSectionImage1.jpg'
+// import HeaderImage from '../../assets/images/LandingSectionImage1.jpg'
 import ImageOverlay from '../UI/ImageOverlay/ImageOverlay'
 import Button from '../Button/Button'
 
 function LandingSection({ introText }) {
     let history = useHistory()
     return (
-        <div className="LandingSection__container" style={{ backgroundImage: `url(${HeaderImage})` }}>
+        <div className="LandingSection__container" style={{ backgroundImage: `url(https://tylorkolbeck.s3-us-west-2.amazonaws.com/images/LandingSectionImage1.jpg)` }}>
             <div>
                 <ScrollAnimation animateIn="fadeInLeft" animateOnce>
                     <div className="LandingSection__content-header">
