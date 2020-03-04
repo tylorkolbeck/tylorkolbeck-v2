@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom'
 const sectionText = {
     workSectionCaption: () => <p>Here are a few projects that I am currently working on. You can view my resume <Link to='/resume'>here.</Link></p>,
     headerSectionCaption: () => <p>These are my primary skill areas.</p>,
-    landingSectionCaption: () => <h1 className="LandingSection__header-text"> Hi, my name is <span>Tylor Kolbeck</span>. I Am a UI/UX and Front End Developer.</h1>,
+    landingSectionCaption: () => <h1 className="LandingSection__header-text"> Hi, my name is <span>Tylor Kolbeck</span>. I Am a Front End Web Developer.</h1>,
     contactSectionCaption: () => <p>If you have a question or want to collaborate on a project please send me a message!</p>
 }
 
