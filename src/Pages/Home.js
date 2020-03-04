@@ -19,7 +19,7 @@ const sectionText = {
 
 const workInfo = [
     {
-        img: 'wildside_mockup.jpg',
+        img: 'nda_meme.jpg',
         title: 'UI / UX Developer',
         text: `<p>I am currently working for Jack Henry and Asssociates as a UI/UX developer.  I am responsible for producing and maintaining a functional prototype built in REACT. Our team uses the prototype to test with users at Credit Unions across the US.</p>
                 <ul>

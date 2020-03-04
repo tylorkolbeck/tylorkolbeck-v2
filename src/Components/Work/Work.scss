@@ -31,6 +31,7 @@
     display: flex;
     justify-content: left;
     flex-wrap: wrap-reverse;
+    align-items: flex-start;
 }
 
 .Work__content-text {
@@ -65,7 +66,7 @@
     width: 100%;
     max-width: 500px;
     height: 300px;
-    margin-bottom: 50px;
+    margin-bottom: auto;
     margin-right: 40px;
 
     img {
