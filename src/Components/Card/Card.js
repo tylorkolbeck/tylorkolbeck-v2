@@ -2,7 +2,8 @@ import React from "react";
 import "./Card.scss";
 import ScrollAnimation from "react-animate-on-scroll";
 
-export default function Card({ index, title, text, delay, imgSrc }) {
+export default function Card({ index, title, text, delay, imgSrc, link }) {
+  console.log(link);
   return (
     <ScrollAnimation animateIn="fadeInRight" animateOnce delay={delay}>
       <div className="Card__container">
@@ -17,7 +18,10 @@ export default function Card({ index, title, text, delay, imgSrc }) {
           >
             {/* <img src={imgSrc} alt="presentational"></img> */}
           </div>
-          <div className="Card__text">
+          <div className="Card__text u-m-t-sm">
+            <a href={link} target="_BLANK" rel="noreferrer noopener">
+              Visit Repo
+            </a>
             <h2>{title}</h2>
             <p>{text}</p>
           </div>
