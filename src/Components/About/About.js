@@ -9,12 +9,15 @@ export default function About() {
     <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
       <div className="About__container">
         <div className="About__image-container">
-          <div className="About-img">
-            <img
+          <div
+            className="About-img"
+            style={{ backgroundImage: `url(${profileImage})` }}
+          >
+            {/* <img
               src={profileImage}
               alt="profile"
               style={{ height: "inherit" }}
-            ></img>
+            ></img> */}
           </div>
         </div>
 
