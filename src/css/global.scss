@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 input {
     outline: none;
@@ -21,6 +21,10 @@ textarea {
 }
 
 .input-error {
-    font-size: .8em;
+    font-size: 0.8em;
     color: $color-red;
+}
+
+.u-m-t-sm {
+    margin-top: 8px;
 }
