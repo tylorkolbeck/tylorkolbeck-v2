@@ -23,7 +23,8 @@ const sectionText = {
   landingSectionCaption: () => (
     <h1 className="LandingSection__header-text">
       {" "}
-      Hi, my name is <span>Tylor Kolbeck</span>. I am a Front End Web Developer.
+      Hi, my name is <br />
+      <span>Tylor Kolbeck</span>. <br />I am a Front End Web Developer.
     </h1>
   ),
   contactSectionCaption: () => (
