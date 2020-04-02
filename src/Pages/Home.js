@@ -204,7 +204,7 @@ export default function Home() {
                   index={index + 1}
                   title={toTitleCase(card.name.split("-").join(" "))}
                   text={card.description}
-                  link={card.url + card.name}
+                  link={card.url + "/" + card.name}
                   imgSrc={imgOptions[index]}
                 />
               );
