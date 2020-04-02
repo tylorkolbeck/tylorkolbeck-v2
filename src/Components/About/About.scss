@@ -1,8 +1,8 @@
-@import '../../css/variables.scss';
+@import "../../css/variables.scss";
 
 .About__container {
     // min-height: 100vh;
-    
+
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -14,11 +14,11 @@
     border-left: $border-size solid $color-red;
     padding-bottom: 100px;
     display: flex;
-
-
 }
 
 .About-img {
+    background-position: center;
+    background-size: cover;
     margin-left: 50px;
     height: 30vw;
     width: 30vw;
@@ -26,7 +26,7 @@
     max-width: 600px;
     max-height: 600px;
     margin-right: 40px;
-    background: $color-grey-light;
+    // background: $color-grey-light;
 }
 
 .About__text-container {
@@ -40,9 +40,7 @@
     }
 }
 
-
 @media only screen and (max-width: 1000px) {
-
     .About__text-container {
         width: 100%;
         padding-bottom: 100px;
@@ -66,7 +64,6 @@
     }
 }
 
-
 @media only screen and (max-width: 600px) {
     .About-img {
         margin-left: 0;
@@ -75,10 +72,8 @@
         height: 80vw;
     }
 
-
     .About__image-container {
         border: none;
         // width: 600px;
     }
-
 }
