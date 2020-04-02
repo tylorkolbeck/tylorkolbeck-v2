@@ -1,4 +1,4 @@
-@import '../../css/variables.scss';
+@import "../../css/variables.scss";
 
 .Card__container {
     display: flex;
@@ -24,13 +24,15 @@
 }
 
 .Card__image-container {
+    background-position: left;
+    background-size: center;
     height: 80vw;
     width: 80vw;
     max-width: 250px;
     max-height: 250px;
     margin-top: 16px;
     background: $color-grey-light;
-    background: $color-grey-dark;
+    // background: $color-grey-dark;
 }
 
 .Card__text {
@@ -64,6 +66,4 @@
     .Card__image-container {
         width: 100%;
     }
-
 }
-

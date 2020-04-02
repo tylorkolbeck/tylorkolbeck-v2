@@ -9,6 +9,9 @@ export const FirebaseContext = createContext()
 //     time: 45
 // })
 
+
+// console.log(ref)
+
 function onAuthStateChange(callback) {
     return firebase.auth().onAuthStateChanged(user => {
         if (user) {

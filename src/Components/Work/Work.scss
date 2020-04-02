@@ -1,4 +1,4 @@
-@import '../../css/variables.scss';
+@import "../../css/variables.scss";
 
 .Work__container {
     width: 100%;
@@ -11,7 +11,7 @@
     & > div:first-of-type {
         h1 {
             font-size: 9em;
-            line-height: .7em;
+            line-height: 0.7em;
             padding-left: 40px;
         }
     }
@@ -53,13 +53,12 @@
     }
 
     & li::before {
-        content: '';
+        content: "";
         left: -20px;
         position: absolute;
         background-color: $color-red;
     }
 }
-
 
 .Work__content-img {
     background: none;
@@ -75,9 +74,7 @@
     }
 }
 
-
 @media only screen and (max-width: 600px) {
-
     .Work__content_container {
         grid-template-columns: 0px auto;
     }

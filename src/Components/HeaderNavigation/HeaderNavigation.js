@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link, animateScroll as scroll } from 'react-scroll'
 import { withRouter, Link as RouterLink, useHistory } from 'react-router-dom'
 
 import './HeaderNavigation.scss'
