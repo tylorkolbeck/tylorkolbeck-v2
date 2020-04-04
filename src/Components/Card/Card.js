@@ -12,7 +12,6 @@ export default function Card({
   link,
   dateCreated,
 }) {
-  console.log(link)
   return (
     <ScrollAnimation animateIn="fadeInRight" animateOnce delay={delay}>
       <div className="Card__container">
