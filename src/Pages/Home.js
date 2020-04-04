@@ -200,6 +200,7 @@ export default function Home() {
         >
           {cardData.length > 0 ? (
             reposDesc.map((repo, index) => {
+              console.log("MAKING CARD")
               return (
                 <Card
                   key={index}
