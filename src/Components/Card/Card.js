@@ -32,7 +32,6 @@ export default function Card({
               Visit Repo
             </a>
             <h2>{title}</h2>
-            {console.log(dateCreated)}
             <span>{moment(dateCreated).format("LL")}</span>
             <p>{text}</p>
           </div>
