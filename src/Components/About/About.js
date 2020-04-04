@@ -1,8 +1,8 @@
-import React from "react";
-import "./About.scss";
-import reactHtmlParser from "react-html-parser";
-import ScrollAnimation from "react-animate-on-scroll";
-import profileImage from "../../assets/images/profile_one.jpg";
+import React from "react"
+import "./About.scss"
+import reactHtmlParser from "react-html-parser"
+import ScrollAnimation from "react-animate-on-scroll"
+import profileImage from "../../assets/images/profile_one.webp"
 
 export default function About() {
   return (
@@ -28,5 +28,5 @@ export default function About() {
         </div>
       </div>
     </ScrollAnimation>
-  );
+  )
 }

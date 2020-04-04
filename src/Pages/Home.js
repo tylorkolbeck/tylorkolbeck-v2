@@ -37,7 +37,7 @@ const sectionText = {
 
 const workInfo = [
   {
-    img: "cityscape.jpeg",
+    img: "cityscape.webp",
     title: "UI / UX Developer",
     text: `<p>I am currently working for Jack Henry and Associates as a Senior UX developer.  I am responsible for producing and maintaining a functional credit union teller application built with React. Our team uses the prototype for user testing with credit unions all around the US.</p>
                 <ul>
@@ -48,7 +48,7 @@ const workInfo = [
               `,
   },
   {
-    img: "wildside_mockup.jpg",
+    img: "wildside_mockup.webp",
     title: "WildsideVo.com",
     text: `<p>WildsideVO is a voice over portfolio designed for a client to show case his work and passion for wildlife.  Created using React and designed to fil all screen sizes.</p>
                 <ul>
@@ -58,7 +58,7 @@ const workInfo = [
                 `,
   },
   {
-    img: "petcare_mockup.png",
+    img: "petcare_mockup.webp",
     title: "JenniferInglePetCare.com",
     text: `<p>Created for a client to market their pet sitting business as well provide a place for customers to request pet services. Created using React, deployed on a Digital Ocean virtual instance and designed to fit all screen sizes.</p>
                 <ul>
@@ -129,7 +129,6 @@ export default function Home() {
   useEffect(() => {
     axios.get("http://api.tylorkolbeck.com/desc").then((repos) => {
       setReposDesc(repos.data)
-      console.log(repos)
     })
   }, [])
 
@@ -200,7 +199,6 @@ export default function Home() {
         >
           {cardData.length > 0 ? (
             reposDesc.map((repo, index) => {
-              console.log("MAKING CARD")
               return (
                 <Card
                   key={index}

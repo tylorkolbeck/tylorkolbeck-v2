@@ -5,13 +5,13 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    height: 100%;
     height: 100vh;
     background-size: cover;
-    background-position: center;
+    background: url("../../assets/images/LandingSectionImage1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
     justify-content: center;
     z-index: 1;
-    background: url("https://tylorkolbeck.s3-us-west-2.amazonaws.com/images/LandingSectionImage1.jpg");
 }
 
 .LandingSection__content-header {
