@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import LandingSection from "../Components/LandingSection/LandingSection";
-import Section from "../Components/Section/Section";
-import Work from "../Components/Work/Work";
-import Error from "../Components/Error/Error";
-import Skill from "../Components/Skill/Skill";
-import About from "../Components/About/About";
-import ContactForm from "../Components/ContactForm/ContactForm";
-import Button from "../Components/Button/Button";
-import Card from "../Components/Card/Card";
-import { toTitleCase } from "../helpers/helpers.js";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react"
+import axios from "axios"
+import LandingSection from "../Components/LandingSection/LandingSection"
+import Section from "../Components/Section/Section"
+import Work from "../Components/Work/Work"
+import Error from "../Components/Error/Error"
+import Skill from "../Components/Skill/Skill"
+import About from "../Components/About/About"
+import ContactForm from "../Components/ContactForm/ContactForm"
+import Button from "../Components/Button/Button"
+import Card from "../Components/Card/Card"
+import { toTitleCase } from "../helpers/helpers.js"
+import { Link } from "react-router-dom"
 
 const sectionText = {
   workSectionCaption: () => (
@@ -32,8 +32,8 @@ const sectionText = {
       If you have a question or want to collaborate on a project please send me
       a message!
     </p>
-  )
-};
+  ),
+}
 
 const workInfo = [
   {
@@ -45,7 +45,7 @@ const workInfo = [
                     <li>Prototyping</li>
                     <li>User Testing</li>
                     <li>Sketch</li>
-              `
+              `,
   },
   {
     img: "wildside_mockup.jpg",
@@ -55,7 +55,7 @@ const workInfo = [
                     <li>React</li>
                     <li>Responsive</li>
                 </ul>
-                `
+                `,
   },
   {
     img: "petcare_mockup.png",
@@ -66,69 +66,72 @@ const workInfo = [
                     <li>Responsive</li>
                     <li>Email Services</li>
                 </ul>
-                `
-  }
-];
+                `,
+  },
+]
 
 const skillData = [
   {
     percent: 80,
-    name: "React"
+    name: "React",
   },
   {
     percent: 90,
-    name: "HTML/CSS"
+    name: "HTML/CSS",
   },
   {
     percent: 90,
-    name: "Javascript"
+    name: "Javascript",
   },
   {
     percent: 60,
-    name: "Node.js"
+    name: "Node.js",
   },
   {
     percent: 60,
-    name: "UX Design"
-  }
-];
+    name: "UX Design",
+  },
+]
 
 const cardData = [
   {
     title: "Coming Soon",
     text:
       "Please be patient while I get my blog posts connected to my website.",
-    image: ""
+    image: "",
   },
   {
     title: "Coming Soon",
     text:
       "Please be patient while I get my blog posts connected to my website.",
-    image: ""
+    image: "",
   },
   {
     title: "Coming Soon",
     text:
       "Please be patient while I get my blog posts connected to my website.",
-    image: ""
-  }
-];
+    image: "",
+  },
+]
 
 const imgOptions = [
   "https://images.unsplash.com/photo-1559213237-6fdea41b7308?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
   "https://images.unsplash.com/photo-1533743965297-e75ee3db524e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-  "https://images.unsplash.com/photo-1584608354186-2b75991b154c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-];
+  "https://images.unsplash.com/photo-1584608354186-2b75991b154c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+  "https://images.unsplash.com/photo-1565967485326-a8837dcaa0ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
+  "https://images.unsplash.com/photo-1571054992052-bf73b6ea0794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
+  "https://images.unsplash.com/photo-1576614105101-4e832921dad8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
+]
 
 export default function Home() {
-  let [reposDesc, setReposDesc] = useState([]);
+  let [reposDesc, setReposDesc] = useState([])
 
   useEffect(() => {
-    axios.get("http://api.tylorkolbeck.com/desc").then(repos => {
-      setReposDesc(repos.data);
-      console.log(repos);
-    });
-  }, []);
+    axios.get("http://api.tylorkolbeck.com/desc").then((repos) => {
+      setReposDesc(repos.data)
+      console.log(repos)
+    })
+  }, [])
 
   return (
     <div>
@@ -192,7 +195,7 @@ export default function Home() {
           style={{
             display: "flex",
             justifyContent: "center",
-            flexWrap: "wrap"
+            flexWrap: "wrap",
           }}
         >
           {cardData.length > 0 ? (
@@ -207,7 +210,7 @@ export default function Home() {
                   link={card.url + "/" + card.name}
                   imgSrc={imgOptions[index]}
                 />
-              );
+              )
             })
           ) : (
             <Error>No Card Data</Error>
@@ -223,5 +226,5 @@ export default function Home() {
         <About />
       </Section>
     </div>
-  );
+  )
 }
