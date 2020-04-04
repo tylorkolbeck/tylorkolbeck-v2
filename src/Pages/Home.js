@@ -199,15 +199,16 @@ export default function Home() {
           }}
         >
           {cardData.length > 0 ? (
-            reposDesc.map((card, index) => {
+            reposDesc.map((repo, index) => {
               return (
                 <Card
                   key={index}
+                  dateUpdated={repo.updated}
                   delay={index * 180}
                   index={index + 1}
-                  title={toTitleCase(card.name.split("-").join(" "))}
-                  text={card.description}
-                  link={card.url + "/" + card.name}
+                  title={toTitleCase(repo.name.split("-").join(" "))}
+                  text={repo.description}
+                  link={repo.url + "/" + repo.name}
                   imgSrc={imgOptions[index]}
                 />
               )
