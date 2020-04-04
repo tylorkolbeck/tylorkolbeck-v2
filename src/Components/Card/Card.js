@@ -1,8 +1,17 @@
 import React from "react"
 import "./Card.scss"
 import ScrollAnimation from "react-animate-on-scroll"
+import moment from "moment"
 
-export default function Card({ index, title, text, delay, imgSrc, link }) {
+export default function Card({
+  index,
+  title,
+  text,
+  delay,
+  imgSrc,
+  link,
+  dateCreated,
+}) {
   console.log(link)
   return (
     <ScrollAnimation animateIn="fadeInRight" animateOnce delay={delay}>
@@ -23,8 +32,8 @@ export default function Card({ index, title, text, delay, imgSrc, link }) {
               Visit Repo
             </a>
             <h2>{title}</h2>
-
-            <span>Date Updated</span>
+            {console.log(dateCreated)}
+            <span>{moment(dateCreated).format("LL")}</span>
             <p>{text}</p>
           </div>
         </div>

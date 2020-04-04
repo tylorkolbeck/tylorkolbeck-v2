@@ -203,7 +203,7 @@ export default function Home() {
               return (
                 <Card
                   key={index}
-                  dateUpdated={repo.updated}
+                  dateCreated={repo.created}
                   delay={index * 180}
                   index={index + 1}
                   title={toTitleCase(repo.name.split("-").join(" "))}
