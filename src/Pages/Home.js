@@ -102,7 +102,11 @@ const skillData = [
   },
   {
     percent: 60,
-    name: "UX Design",
+    name: "UI / UX",
+  },
+  {
+    percent: 60,
+    name: "AWS Services",
   },
 ]
 
