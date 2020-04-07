@@ -37,6 +37,19 @@ const sectionText = {
 
 const workInfo = [
   {
+    img: "blocks.jpeg",
+    title: "Full Stack Web Developer",
+    text: `<p>I created my website from the ground up using React on the front end and AWS services for the back end.</p>
+                <ul>
+                    <li>UI / UX</li>
+                    <li>React</li>
+                    <li>AWS Services</li>
+                    <li>MongoDB</li>
+                    <li>NGINX</li>
+                    <li>Linux Servers</li>
+              `,
+  },
+  {
     img: "cityscape.webp",
     title: "UI / UX Developer",
     text: `<p>I am currently working for Jack Henry and Associates as a Senior UX developer.  I am responsible for producing and maintaining a functional credit union teller application built with React. Our team uses the prototype for user testing with credit unions all around the US.</p>
